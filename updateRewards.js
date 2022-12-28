@@ -10,7 +10,7 @@ const web3Pro = new Web3(new Web3.providers.HttpProvider(URL));
 const RentalContract = new web3Pro.eth.Contract(rental_abi, rentalContractAddress);
 
 const callApi = (num) => {
-    axios.post('http://localhost:8000/api/updateRewards', {init: num}).then((data) => {
+    axios.post('https://rental-api-d5ih3.ondigitalocean.app/api/updateRewards', {init: num}).then((data) => {
         console.log(data.data);
     }).catch((err) => {console.log(err)})   
     console.log(num) 
