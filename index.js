@@ -8,7 +8,7 @@ app.listen(PORT, () => {
     console.log(`Server Running at http://localhost:${PORT} ...`);
 });
 const {updateRewards} = require('./updateRewards.js')
-cron.schedule('*/5 * * * * *', () => {
+cron.schedule('* * * * *', () => {
     updateRewards()
     console.log("Job Executed", "⌛️" ,new Date().toLocaleString(undefined, {timeZone: 'Asia/Kolkata'}));
   });
