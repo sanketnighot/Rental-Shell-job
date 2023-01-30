@@ -20,7 +20,7 @@ module.exports.updateRewards = async () => {
     const currentRewardId = await RentalContract.methods.getCurrentRewrdId().call().catch((err) => {
         console.log(err)
         return res.status(400).send({Error: err})})
-    for (i = 1; i <= currentRewardId; i+=5) {
+    for (i = 1; i <= currentRewardId; i+=50) {
         callApi(i,currentRewardId)
     }
 }
